@@ -1,0 +1,14 @@
+<h1>new file</h1>
+
+{% for obj in objs %}
+  
+  {{obj.pk}}
+  <h2>{{ obj.long_url }}</h2></br>
+  <a href ="{{obj.long_url}}">http://go.to/{{obj.Shortcode}}</a>
+  <h3>{{ obj.Shortcode }}</h3></br>
+  <h4>{{ obj.created_date }}</h4>
+  
+  <button><a href="http://127.0.0.1:8000/edit/{{obj.pk}}">Edit</a></button>
+  <hr>
+{% endfor %}
+
